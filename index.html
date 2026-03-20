@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aditya Mishra | Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🌌 BACKGROUND -->
+<div class="stars"></div>
+
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+
+<!-- 🎮 MAIN CONTENT -->
+<div id="main-content">
+
+<header>
+  <h1 id="typing" class="name-font"></h1>
+  <p class="tagline">> Data Science, AI & ML Enthusiast</p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <br>
+  <p>
+    I am a CSE student passionate about Data Science and Machine Learning.
+    I build data-driven solutions and am actively seeking internships and freelance opportunities.
+  </p>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Crop Prediction ML Model</h3>
+    <p>ML model using Python, Pandas, Scikit-learn.</p>
+  </div>
+
+  <div class="card">
+    <h3>Churn Prediction Using AI & ML</h3>
+    <p>NLP.</p>
+  </div>
+
+</section>
+
+<section>
+  <h2>Skills </h2>
+  <br>
+  <div class="skills">
+    <span>Python</span>
+    <span>Pandas</span>
+    <span>NumPy</span>
+    <span>Matplotlib</span>
+    <span>Seaborn</span>
+    <span>Scikit-learn</span>
+    <span>Tensorflow</span>
+    <span>SQL</span>
+    <span>Generative AI</span>
+    <Span>Artificial Learning (AI)</Span>
+    <span>Machine Learning (ML)</span>
+    <Span>Prompt Enigineering</Span>
+    <span>Computer Vison</span>
+    <span>Natural Language Processing (NLP)</span>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: aditya.tatva2@gmail.com</p>
+  <p>GitHub: <a href="#">Your GitHub</a></p>
+  <P>Linkedin: <a href="#"></a></P>
+</section>
+
+<footer>
+  <p>© 2026 Aditya Mishra</p>
+</footer>
+
+</div>
+
+<script>
+// ⌨️ Typing effect
+const text = "Aditya Mishra";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").textContent += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 100);
+  }
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>

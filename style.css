@@ -1,0 +1,157 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌌 BACKGROUND */
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1A05A2, #8F0177 70%, #090a0f);
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+/* 🌟 STARS */
+.stars {
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #A3FFD6;
+  z-index: 0;
+
+  box-shadow:
+    10vw 10vh 2px #7BC9FF,
+    20vw 20vh 2px #A3FFD6,
+    30vw 30vh 2px #7BC9FF,
+    40vw 40vh 2px #A3FFD6,
+    50vw 50vh 2px #7BC9FF,
+    60vw 60vh 2px #A3FFD6,
+    70vw 70vh 2px #7BC9FF,
+    80vw 80vh 2px #A3FFD6,
+    90vw 30vh 2px #7BC9FF;
+
+  animation: twinkle 8s infinite linear;
+}
+
+/* Shooting stars */
+.shooting-star {
+  position: fixed;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, #F67D31, transparent);
+  z-index: 0;
+  animation: shoot 3s infinite ease-in;
+}
+
+.shooting-star:nth-child(2) { top: 20%; left: -100px; }
+.shooting-star:nth-child(3) { top: 40%; left: -100px; animation-delay: 1s; }
+.shooting-star:nth-child(4) { top: 60%; left: -100px; animation-delay: 2s; }
+.shooting-star:nth-child(5) { top: 30%; left: -100px; animation-delay: 1.5s; }
+.shooting-star:nth-child(6) { top: 70%; left: -100px; animation-delay: 2.5s; }
+
+/* Animations */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(25deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw) translateY(50vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+/* 🎮 CONTENT ABOVE BACKGROUND */
+#main-content,
+header,
+section,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* 🎮 NAME (Silkscreen) */
+.name-font {
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 48px;
+  color: #F67D31;
+  text-shadow: 0 0 10px #F67D31;
+}
+
+/* Headings */
+h2 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Tagline */
+.tagline {
+  color: #DE1A58;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+/* Cards */
+.card {
+  border: 1px solid #8F0177;
+  padding: 20px;
+  margin: 20px 0;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px #F67D31;
+  transform: translateY(-5px);
+}
+
+/* Skills */
+.skills span {
+  border: 1px solid #DE1A58;
+  padding: 6px 12px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.skills span:hover {
+  background: #DE1A58;
+}
+
+/* Links */
+a {
+  color: #F67D31;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #DE1A58;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .name-font {
+    font-size: 28px;
+  }
+}
