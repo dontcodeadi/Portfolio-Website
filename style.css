@@ -150,31 +150,28 @@ footer {
   color: #DE1A58;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .name-font {
     font-size: 28px;
   }
+}
 
 /* 🔥 PROJECTS ADVANCED CARDS */
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
+.container { display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 40px; }
 
-.container .box {
-  position: relative;
-  width: 300px;
-  height: 380px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-}
+  .container .box { 
+  position: relative; 
+  width: 300px; 
+  height: 380px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  transition: 0.5s; }
 
 /* Gradient glow */
 .container .box::before,
@@ -251,7 +248,7 @@ footer {
 /* Button */
 .container .box .content a {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 20%;
   padding: 8px 12px;
   background: #fff;
   color: #111;
@@ -263,5 +260,200 @@ footer {
 .container .box .content a:hover {
   background: #F67D31;
   color: #fff;
+}
+#contact {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0 0;
+}
+
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons li a {
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+
+  display: flex;              /* ✅ ADD */
+  justify-content: center;    /* ✅ ADD */
+  align-items: center;        /* ✅ ADD */
+
+  font-size: 30px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fff;
+  transition: 0.3s;
+}
+
+.social-icons li a .icon {
+  color: #262626;
+  transition: .5s;
+}
+
+.social-icons li a .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.social-icons li a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+  z-index: 0;
+}
+
+.social-icons li a:hover::before {
+  top: 0;
+}
+
+/* Individual colors */
+.social-icons li:nth-child(1) a::before {
+  background: #EA4335; /* Email */
+}
+
+.social-icons li:nth-child(2) a::before {
+  background: #333; /* GitHub */
+}
+
+.social-icons li:nth-child(3) a::before {
+  background: #0077b5; /* LinkedIn */
+}
+
+/* Apply cyberpunk gradient to resume (first box) */
+#resume .box:nth-child(1)::before,
+#resume .box:nth-child(1)::after {
+  background: linear-gradient(315deg, #ff00cc, #3333ff);
+}
+/* Section */
+#resume {
+  text-align: center;
+  padding: 80px 0;
+}
+
+/* Wrapper */
+.resume-wrapper {
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* Card */
+/* ===== RESUME SECTION ===== */
+#resume {
+  text-align: center;
+  padding: 80px 0;
+}
+
+/* Wrapper */
+.resume-wrapper {
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* Card */
+.resume-card {
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  text-align: center;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔥 CYBERPUNK GRADIENT GLOW */
+.resume-card::before,
+.resume-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  background: linear-gradient(315deg, #ff00cc, #3333ff);
+}
+
+/* Glow blur */
+.resume-card::after {
+  filter: blur(40px);
+}
+
+/* Hover animation */
+.resume-card:hover::before,
+.resume-card:hover::after {
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 40px);
+}
+
+/* Lift effect */
+.resume-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Icon */
+.resume-icon {
+  font-size: 50px;
+  color: #ff00cc;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.resume-card:hover .resume-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Buttons container */
+.resume-actions {
+  margin-top: 15px;
+}
+
+/* Buttons */
+.resume-actions a {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  background: #ff00cc;
+  color: white;
+  transition: 0.3s;
+}
+
+.resume-actions a:hover {
+  background: #3333ff;
 }
 }
